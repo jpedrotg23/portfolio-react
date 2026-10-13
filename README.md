@@ -1,58 +1,16 @@
-# João Pedro | Portfólio
+# React + Vite
 
-Portfólio profissional desenvolvido com **React**, **Vite** e **Framer Motion**, com foco em apresentar minha trajetória, habilidades e projetos em Ciência da Computação.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## 🌐 Acesse o site
+Currently, two official plugins are available:
 
-**[Abrir meu portfólio](https://jpedrotg23.github.io/portfolio-react/)**
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-O site é publicado pelo GitHub Pages. A cada atualização enviada para a branch `main`, o GitHub Actions instala as dependências, gera a versão de produção e publica o resultado automaticamente.
+## React Compiler
 
-## ✨ Recursos
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- Interface responsiva para computadores, tablets e celulares.
-- Animações de entrada e interação com Framer Motion.
-- Seções Sobre mim, Tecnologias, Projetos e Contato.
-- Links para repositórios, demonstrações e redes profissionais.
-- Tema escuro com detalhes em vermelho.
-- Publicação automatizada com GitHub Actions e GitHub Pages.
+## Expanding the Oxlint configuration
 
-## 🧰 Tecnologias
-
-- React
-- Vite
-- JavaScript
-- CSS
-- Framer Motion
-- Lucide React
-- GitHub Actions
-- GitHub Pages
-
-## 💻 Executar localmente
-
-Você precisa ter Node.js e npm instalados.
-
-1. Clone este repositório:
-   `git clone https://github.com/jpedrotg23/portfolio-react.git`
-2. Entre na pasta:
-   `cd portfolio-react`
-3. Instale as dependências:
-   `npm install`
-4. Inicie o servidor de desenvolvimento:
-   `npm run dev`
-
-O terminal mostrará o endereço local para abrir no navegador.
-
-## 🚀 Publicação
-
-A publicação está configurada em `.github/workflows/deploy.yml`. No GitHub, abra **Settings → Pages** e selecione **GitHub Actions** como fonte de publicação, caso ainda não esteja selecionada. Depois, acompanhe a primeira execução na aba **Actions**.
-
-## 📬 Contato
-
-- GitHub: [@jpedrotg23](https://github.com/jpedrotg23)
-- LinkedIn: [joaootg](https://www.linkedin.com/in/joaootg/)
-- E-mail: [joaopedrotg23@gmail.com](mailto:joaopedrotg23@gmail.com)
-
----
-
-Desenvolvido por **João Pedro Teixeira Guimarães**.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
