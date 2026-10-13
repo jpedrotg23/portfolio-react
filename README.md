@@ -26,12 +26,6 @@ Sou estudante de **Ciência da Computação na UNIFOR** e estagiário de Suporte
 - Interface moderna e intuitiva
 - Acesso online por diferentes dispositivos
 
-## 🌐 Acesse online
-
-O projeto está publicado no **GitHub Pages**, permitindo acesso pela internet a qualquer momento.
-
-🔗 https://jpedrotg23.github.io/portfolio-react/
-
 ## 💻 Executar localmente
 
 Para executar o projeto em sua máquina, siga os passos abaixo:
