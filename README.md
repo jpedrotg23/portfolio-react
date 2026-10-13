@@ -1,16 +1,59 @@
-# React + Vite
+# 🚀 Portfólio React — João Pedro
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Meu portfólio pessoal desenvolvido com **React + Vite**, apresentando meus projetos, habilidades e informações profissionais na área de tecnologia.
 
-Currently, two official plugins are available:
+🌐 **Acesse meu portfólio:** https://jpedrotg23.github.io/portfolio-react/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🧑‍💻 Sobre mim
 
-## React Compiler
+Sou estudante de **Ciência da Computação na UNIFOR** e estagiário de Suporte Técnico de TI. Estou desenvolvendo minhas habilidades em programação e desenvolvimento web, buscando evoluir constantemente e construir projetos que contribuam para minha carreira na tecnologia.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologias utilizadas
 
-## Expanding the Oxlint configuration
+- React
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+- Git e GitHub
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## ✨ Funcionalidades
+
+- Apresentação pessoal e profissional
+- Exibição de habilidades técnicas
+- Portfólio de projetos
+- Layout responsivo
+- Interface moderna e intuitiva
+- Acesso online por diferentes dispositivos
+
+## 🌐 Acesse online
+
+O projeto está publicado no **GitHub Pages**, permitindo acesso pela internet a qualquer momento.
+
+🔗 https://jpedrotg23.github.io/portfolio-react/
+
+## 💻 Executar localmente
+
+Para executar o projeto em sua máquina, siga os passos abaixo:
+
+```bash
+# Clone o repositório
+git clone https://github.com/jpedrotg23/portfolio-react.git
+
+# Entre na pasta do projeto
+cd portfolio-react
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
+
+## 📂 Repositório
+
+🔗 https://github.com/jpedrotg23/portfolio-react
+
+---
+
+Desenvolvido por **João Pedro Teixeira Guimarães** 💻
