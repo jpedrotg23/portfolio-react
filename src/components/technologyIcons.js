@@ -1,0 +1,37 @@
+const technologyIcons = {
+  HTML5: "devicon-html5-plain colored",
+  CSS3: "devicon-css3-plain colored",
+  JavaScript: "devicon-javascript-plain colored",
+  HTML: "devicon-html5-plain colored",
+  TypeScript: "devicon-typescript-plain colored",
+  React: "devicon-react-original colored",
+  Vite: "devicon-vitejs-plain colored",
+  "Tailwind CSS": "devicon-tailwindcss-original colored",
+  "React Native": "devicon-react-original colored",
+  Expo: "fa-solid fa-mobile-screen-button",
+  "React Router": "fa-solid fa-route",
+  Java: "devicon-java-plain colored",
+  "Spring Boot": "devicon-spring-plain colored",
+  Firebase: "devicon-firebase-plain colored",
+  "Firebase Authentication": "devicon-firebase-plain colored",
+  "Cloud Firestore": "devicon-firebase-plain colored",
+  "Firebase Storage": "devicon-firebase-plain colored",
+  Git: "devicon-git-plain colored",
+  GitHub: "devicon-github-original",
+  Gradle: "devicon-gradle-plain colored",
+  "IntelliJ IDEA": "devicon-intellij-plain colored",
+  "Visual Studio Code": "devicon-vscode-plain colored",
+  Godot: "devicon-godot-plain colored",
+  "Godot Engine 4.5": "devicon-godot-plain colored",
+  GDScript: "devicon-godot-plain colored",
+  Leaflet: "fa-solid fa-location-dot",
+  OpenStreetMap: "fa-solid fa-map",
+  Nominatim: "fa-solid fa-magnifying-glass-location",
+  "Framer Motion": "fa-solid fa-wand-magic-sparkles",
+  Konva: "fa-solid fa-shapes",
+  "React Konva": "fa-solid fa-shapes",
+};
+
+export function getTechnologyIcon(technology) {
+  return technologyIcons[technology] || "fa-solid fa-code";
+}

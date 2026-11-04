@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,8 +18,10 @@ function Navbar() {
   }, []);
 
   const links = [
-    { name: "Sobre", href: "#sobre" },
+    { name: "Início", href: "#inicio" },
+    { name: "Sobre mim", href: "#sobre" },
     { name: "Tecnologias", href: "#tecnologias" },
+    { name: "Serviços", href: "#servicos" },
     { name: "Projetos", href: "#projetos" },
     { name: "Contato", href: "#contato" },
   ];
@@ -30,15 +33,28 @@ function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      <div className="logo">
+      <a className="logo" href="#inicio" aria-label="Ir para o início" onClick={() => setMenuOpen(false)}>
         <span>&lt;</span>JP<span>/&gt;</span>
-      </div>
+      </a>
 
-      <div className="nav-links">
+      <button
+        className="menu-toggle"
+        type="button"
+        aria-expanded={menuOpen}
+        aria-controls="primary-navigation"
+        aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+        onClick={() => setMenuOpen((open) => !open)}
+      >
+        <i className={menuOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
+      </button>
+
+      <div id="primary-navigation" className={`nav-links ${menuOpen ? "nav-links-open" : ""}`}>
         {links.map((link, index) => (
           <motion.a
             key={link.name}
             href={link.href}
+            aria-label={`Ir para ${link.name}`}
+            onClick={() => setMenuOpen(false)}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{

@@ -1,215 +1,122 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
-    title: "Mundo do Saber",
-    description:
-      "Jogo educacional desenvolvido como projeto acadêmico, com foco em aprendizagem e interação. O projeto também possui controles desenvolvidos em ESP.",
-    icon: "fa-solid fa-gamepad",
+    id: "pap-online",
+    title: "PAP Online — Sistema de Apoio Psicopedagógico",
+    category: "Web",
+    description: "Proposta de plataforma web para digitalizar e facilitar o acesso aos serviços de Apoio Psicopedagógico da Universidade de Fortaleza.",
+    purpose: "Organizar atendimentos, solicitações e comunicação entre estudantes, profissionais e administradores.",
+    features: ["Portal do estudante e do profissional", "Solicitação e agendamento", "Histórico e adaptações acadêmicas", "Mensagens, relatórios e notificações"],
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    status: "Frontend publicado · Backend planejado",
+    repoUrl: "https://github.com/jpedrotg23/PAP-Online",
+    demoUrl: "https://jpedrotg23.github.io/PAP-Online/",
+    demoLabel: "Ver demonstração",
+    icon: "fa-solid fa-laptop-code",
+    note: "Protótipo navegável do frontend, sem autenticação real, persistência ou operações reais de atendimento.",
     year: "2026",
-    featured: true,
-
-    technologies: [
-      "Godot",
-      "GDScript",
-      "ESP",
-    ],
-
-    links: [
-      {
-        url: "https://github.com/jpedrotg23/MundoDoSaber.git",
-        icon: "fab fa-github",
-        label: "GitHub",
-        title: "GitHub",
-      },
-      {
-        url: "https://www.youtube.com/shorts/SOx6c0GzZwI",
-        icon: "fa-solid fa-microchip",
-        label: "Demo ESP",
-        title: "Demonstração com ESP",
-      },
-      {
-        url: "https://drive.google.com/file/d/1MTcuTmTjVfcyvKwzG-T3EtF9dRZkNQge/view?usp=sharing",
-        icon: "fa-solid fa-gamepad",
-        label: "Demo Jogo",
-        title: "Jogo rodando",
-      },
-    ],
   },
-
   {
-    title: "Catálogo Digital — Sophia",
-    description:
-      "Catálogo profissional desenvolvido para apresentar os produtos e serviços da maquiadora Sophia Barbosa de forma simples, moderna e responsiva.",
+    id: "catalogo-sophia",
+    title: "Catálogo Digital — Sophia Barbosa Makeup",
+    category: "Web",
+    description: "Site profissional desenvolvido para apresentar a identidade visual, o trabalho e os serviços de uma maquiadora profissional.",
+    purpose: "Apresentar serviços e trabalhos de forma visual e facilitar o contato com potenciais clientes.",
+    features: ["Apresentação profissional", "Galeria de trabalhos", "Serviços, preços e modalidades", "Informações para agendamento"],
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    status: "Publicado · Projeto para cliente",
+    repoUrl: "https://github.com/jpedrotg23/catalogo-sophia",
+    demoUrl: "https://jpedrotg23.github.io/catalogo-sophia/",
+    demoLabel: "Ver site publicado",
     icon: "fa-solid fa-paintbrush",
     year: "2026",
-
-    technologies: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-    ],
-
-    links: [
-      {
-        url: "https://github.com/jpedrotg23/catalogo-sophia.git",
-        icon: "devicon-github-original",
-        label: "GitHub",
-        title: "Repositório no GitHub",
-      },
-      {
-        url: "https://jpedrotg23.github.io/catalogo-sophia/",
-        icon: "fa-solid fa-eye",
-        label: "Ver catálogo",
-        title: "Ver catálogo",
-      },
-    ],
+    featured: true,
   },
-
   {
-    title: "Acessibilidade Urbana",
-    description:
-      "Aplicação mobile colaborativa voltada ao mapeamento e avaliação da acessibilidade urbana.",
+    id: "acessibilidade-urbana",
+    title: "Acessibilidade Urbana — Plataforma Colaborativa de Mapeamento",
+    category: "Mobile",
+    description: "Aplicativo mobile acadêmico para registrar, avaliar e compartilhar informações sobre a acessibilidade de locais urbanos.",
+    purpose: "Reunir dados colaborativos que ajudem pessoas a conhecer as condições de acessibilidade dos espaços.",
+    features: ["Mapa e busca geográfica", "Cadastro de locais e coordenadas", "Avaliações, fotos, comentários e upvotes", "Ranking e perfil de usuário"],
+    technologies: ["React Native", "Expo", "TypeScript", "Firebase Authentication", "Cloud Firestore", "Firebase Storage", "Leaflet", "OpenStreetMap", "Nominatim"],
+    status: "Aplicativo mobile · Projeto acadêmico",
+    repoUrl: "https://github.com/jpedrotg23/AcessibilidadeUrbana",
     icon: "fa-solid fa-wheelchair",
     year: "2026",
-
-    technologies: [
-      "React Native",
-      "Expo",
-      "TypeScript",
-    ],
-
-    links: [
-      {
-        url: "https://github.com/jpedrotg23/AcessibilidadeUrbana.git",
-        icon: "devicon-github-original",
-        label: "GitHub",
-        title: "GitHub",
-      },
-    ],
   },
-
   {
-    title: "RPG Nexus",
-    description:
-      "Projeto relacionado ao universo de RPG, explorando desenvolvimento de software e construção de funcionalidades interativas.",
-    icon: "fa-solid fa-dragon",
+    id: "mundo-do-saber",
+    title: "Mundo do Saber — Jogo Educacional",
+    category: "Game Development",
+    description: "Jogo educacional 2D desenvolvido na Godot Engine com exploração, interação e desafios de aprendizagem.",
+    purpose: "Permitir que o jogador explore fases, colete letras e monte palavras de forma interativa.",
+    features: ["Múltiplas fases e cenários 2D", "Movimentação e coleta de letras", "Montagem e validação de palavras", "Diálogos, pausa e progresso"],
+    technologies: ["Godot Engine 4.5", "GDScript"],
+    status: "Game Development · Godot",
+    repoUrl: "https://github.com/jpedrotg23/MundoDoSaber",
+    demoUrl: "https://www.youtube.com/shorts/SOx6c0GzZwI",
+    demoLabel: "Vídeo — Controle físico",
+    demo2Url: "https://drive.google.com/file/d/1MTcuTmTjVfcyvKwzG-T3EtF9dRZkNQge/view?usp=sharing",
+    demo2Label: "Vídeo — Gameplay na tela",
+    icon: "fa-solid fa-gamepad",
     year: "2026",
-
-    technologies: [
-      "JavaScript",
-      "HTML",
-      "CSS",
-    ],
-
-    links: [
-      {
-        url: "https://github.com/jpedrotg23/rpg-nexus",
-        icon: "devicon-github-original",
-        label: "GitHub",
-        title: "GitHub",
-      },
-    ],
   },
-
   {
-    title: "Calculadora Lógica",
-    description:
-      "Aplicação web para trabalhar com lógica proposicional, permitindo gerar tabelas-verdade e analisar proposições.",
+    id: "rpg-nexus",
+    title: "RPG Nexus — Gerenciador de Campanhas de RPG",
+    category: "Web",
+    description: "Aplicação web para organizar campanhas, participantes e personagens de RPG de mesa.",
+    purpose: "Centralizar campanhas, jogadores e fichas em uma interface organizada.",
+    features: ["Autenticação e painel inicial", "Criação e gerenciamento de campanhas", "Jogadores, personagens e NPCs", "Estrutura para D&D, Ordem Paranormal e Sacramento"],
+    technologies: ["React", "TypeScript", "Vite", "Firebase Authentication", "Cloud Firestore", "React Router", "Tailwind CSS", "Framer Motion", "Konva"],
+    status: "Aplicação web · Em desenvolvimento",
+    repoUrl: "https://github.com/jpedrotg23/rpg-nexus",
+    icon: "fa-solid fa-dice-d20",
+    year: "2026",
+  },
+  {
+    id: "calculadora-logica",
+    title: "Calculadora Lógica — Gerador de Tabelas-Verdade",
+    category: "Ferramentas e estudos",
+    description: "Ferramenta web acadêmica para trabalhar com expressões de lógica proposicional.",
+    purpose: "Permitir a construção de expressões e a análise de seus possíveis valores lógicos.",
+    features: ["Variáveis e operadores lógicos", "Verificação léxica e de parênteses", "Combinações de valores", "Tautologia, contradição e contingência"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    status: "Ferramenta acadêmica · Lógica proposicional",
+    repoUrl: "https://github.com/jpedrotg23/calculadora-logica",
     icon: "fa-solid fa-calculator",
     year: "2026",
-
-    technologies: [
-      "JavaScript",
-      "HTML",
-      "CSS",
-    ],
-
-    links: [
-      {
-        url: "https://github.com/jpedrotg23/calculadora-logica",
-        icon: "devicon-github-original",
-        label: "GitHub",
-        title: "GitHub",
-      },
-    ],
-  },
-
-  {
-    title: "PAP Online",
-    description:
-      "Projeto desenvolvido durante minha formação, aplicando conceitos de programação e desenvolvimento de software.",
-    icon: "fa-solid fa-laptop-code",
-    year: "2026",
-
-    technologies: [
-      "Programação",
-      "Web",
-      "Git",
-    ],
-
-    links: [
-      {
-        url: "https://github.com/jpedrotg23/PAP-Online",
-        icon: "devicon-github-original",
-        label: "GitHub",
-        title: "GitHub",
-      },
-    ],
-  },
-
-  {
-    title: "Experimentação de Protótipos",
-    description:
-      "Projeto experimental desenvolvido para explorar prototipação, desenvolvimento e testes de soluções.",
-    icon: "fa-solid fa-flask",
-    year: "2026",
-
-    technologies: [
-      "Prototipação",
-      "Git",
-      "Desenvolvimento",
-    ],
-
-    links: [
-      {
-        url: "https://github.com/jpedrotg23/Experimenta-o-de-prot-tipos",
-        icon: "devicon-github-original",
-        label: "GitHub",
-        title: "GitHub",
-      },
-    ],
   },
 ];
 
-function Projects() {
-  return (
-    <motion.section
-      id="projetos"
-      className="section"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
-    >
+const filters = ["Todos", "Web", "Mobile", "Game Development", "Ferramentas e estudos"];
 
+function Projects() {
+  const [activeFilter, setActiveFilter] = useState("Todos");
+  const visibleProjects = activeFilter === "Todos" ? projects : projects.filter((project) => project.category === activeFilter);
+
+  return (
+    <motion.section id="projetos" className="section" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
       <div className="section-title">
-        <span>03.</span>
-        <h2>Projetos</h2>
+        <span>04.</span>
+        <h2>Projetos em destaque</h2>
         <div className="line"></div>
       </div>
 
-      <div className="projects-grid">
-
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={project.title}
-            project={project}
-            index={index}
-          />
+      <div className="project-filters" aria-label="Filtrar projetos por categoria">
+        {filters.map((filter) => (
+          <button key={filter} type="button" className={activeFilter === filter ? "active" : ""} aria-pressed={activeFilter === filter} onClick={() => setActiveFilter(filter)}>
+            {filter}
+          </button>
         ))}
+      </div>
 
+      <div className="projects-grid">
+        {visibleProjects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}
       </div>
 
     </motion.section>

@@ -5,7 +5,7 @@ function Contact() {
     {
       icon: "fa-solid fa-envelope",
       title: "E-mail",
-      description: "Enviar mensagem",
+      description: "joaopedrotg23@gmail.com",
       link: "mailto:joaopedrotg23@gmail.com",
     },
     {
@@ -20,6 +20,12 @@ function Contact() {
       description: "Meu perfil profissional",
       link: "https://www.linkedin.com/in/joaootg/",
     },
+    {
+      icon: "fa-brands fa-instagram",
+      title: "Instagram",
+      description: "@jpedrotg",
+      link: "https://instagram.com/jpedrotg",
+    },
   ];
 
   return (
@@ -33,7 +39,7 @@ function Contact() {
     >
 
       <div className="section-title">
-        <span>04.</span>
+        <span>06.</span>
         <h2>Contato</h2>
         <div className="line"></div>
       </div>
@@ -54,8 +60,8 @@ function Contact() {
         </h2>
 
         <p>
-          Estou aberto a oportunidades, projetos,
-          networking e novas experiências na área de tecnologia.
+          Quer conversar sobre uma ideia, tecnologia ou desenvolvimento?
+          Vamos trocar uma ideia sobre seu projeto ou próxima oportunidade.
         </p>
 
         <motion.div
@@ -79,7 +85,7 @@ function Contact() {
               href={contact.link}
               target={contact.link.startsWith("http") ? "_blank" : undefined}
               rel="noopener noreferrer"
-              className="contact-card"
+              className={`contact-card ${contact.primary ? "contact-card-primary" : ""}`}
               variants={{
                 hidden: {
                   opacity: 0,

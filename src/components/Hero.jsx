@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function Hero() {
   return (
-    <header className="hero">
+    <header className="hero" id="inicio">
 
       <div className="hero-content">
 
@@ -47,7 +47,7 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            Construindo soluções através de código, tecnologia
+            Desenvolvendo soluções através de código, tecnologia
             e aprendizado contínuo.
           </motion.p>
 
@@ -64,13 +64,11 @@ function Hero() {
             </a>
 
             <a
-              href="https://github.com/jpedrotg23"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contato"
               className="btn btn-secondary"
             >
-              <i className="fab fa-github"></i>
-              GitHub
+              <i className="fa-solid fa-comments"></i>
+              Fale comigo!
             </a>
 
           </motion.div>

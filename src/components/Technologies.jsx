@@ -1,70 +1,31 @@
 import { motion } from "framer-motion";
+import { getTechnologyIcon } from "./technologyIcons";
 
-const technologies = [
+const groups = [
   {
-    icon: "devicon-java-plain",
-    name: "Java",
-    description: "Programação",
+    title: "Desenvolvimento web",
+    items: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "JavaScript" },
+      { name: "TypeScript" },
+      { name: "React" },
+      { name: "Vite" },
+      { name: "Tailwind CSS" },
+      { name: "React Router" },
+    ],
   },
   {
-    icon: "devicon-html5-plain",
-    name: "HTML5",
-    description: "Web",
+    title: "Desenvolvimento mobile",
+    items: ["React Native", "Expo"],
   },
   {
-    icon: "devicon-css3-plain",
-    name: "CSS3",
-    description: "Estilização",
+    title: "Backend e serviços",
+    items: ["Java", "Spring Boot", "Firebase", "Firebase Authentication", "Cloud Firestore", "Firebase Storage"],
   },
   {
-    icon: "devicon-javascript-plain",
-    name: "JavaScript",
-    description: "Web",
-  },
-  {
-    icon: "devicon-typescript-plain",
-    name: "TypeScript",
-    description: "Desenvolvimento",
-  },
-  {
-    icon: "devicon-intellij-plain",
-    name: "IntelliJ IDEA",
-    description: "IDE",
-  },
-  {
-    icon: "devicon-react-original",
-    name: "React Native",
-    description: "Mobile",
-  },
-  {
-    icon: "devicon-git-plain",
-    name: "Git",
-    description: "Versionamento",
-  },
-  {
-    icon: "devicon-github-original",
-    name: "GitHub",
-    description: "Repositórios",
-  },
-  {
-    icon: "devicon-godot-plain",
-    name: "Godot",
-    description: "Game Development",
-  },
-  {
-    icon: "devicon-vscode-plain",
-    name: "VS Code",
-    description: "IDE",
-  },
-  {
-    icon: "fa-solid fa-screwdriver-wrench",
-    name: "Suporte Técnico",
-    description: "Troubleshooting",
-  },
-  {
-    icon: "fa-solid fa-brain",
-    name: "Lógica",
-    description: "Programação",
+    title: "Ferramentas e experiências",
+    items: ["Git", "GitHub", "Gradle", "IntelliJ IDEA", "Visual Studio Code", "Godot", "GDScript", "Leaflet", "OpenStreetMap", "Nominatim", "Framer Motion"],
   },
 ];
 
@@ -107,33 +68,23 @@ function Technologies() {
         <div className="line"></div>
       </div>
 
-      <motion.div className="tech-grid">
-
-        {technologies.map((technology) => (
-          <motion.div
-            className="tech-card"
-            key={technology.name}
-            variants={cardVariants}
-            transition={{
-              duration: 0.45,
-              ease: "easeOut",
-            }}
-            whileHover={{
-              y: -8,
-              scale: 1.03,
-            }}
-          >
-
-            <i className={technology.icon}></i>
-
-            <div>
-              <h3>{technology.name}</h3>
-              <p>{technology.description}</p>
+      <motion.div className="technology-groups">
+        {groups.map((group, index) => (
+          <motion.article className="technology-group" key={group.title} variants={cardVariants} transition={{ duration: 0.45, delay: index * 0.05 }}>
+            <h3>{group.title}</h3>
+            <div className="technology-list">
+              {group.items.map((item) => {
+                const name = typeof item === "string" ? item : item.name;
+                return (
+                  <span className="technology-item" key={name}>
+                    <i className={getTechnologyIcon(name)} aria-hidden="true"></i>
+                    <span>{name}</span>
+                  </span>
+                );
+              })}
             </div>
-
-          </motion.div>
+          </motion.article>
         ))}
-
       </motion.div>
 
     </motion.section>

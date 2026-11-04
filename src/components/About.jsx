@@ -28,25 +28,21 @@ function About() {
         >
 
           <p>
-            Sou estudante de <strong>Ciência da Computação</strong>
-            e tenho interesse em desenvolvimento de software,
-            tecnologia e resolução de problemas.
+            Sou <strong>João Pedro Teixeira Guimarães</strong>, estudante de
+            <strong> Ciência da Computação na UNIFOR</strong> e estagiário de
+            Suporte Técnico de TI.
           </p>
 
           <p>
-            Possuo conhecimentos em
-            <strong>
-              Java, HTML, CSS, JavaScript,
-              TypeScript e React Native
-            </strong>,
-            além de experiência prática com suporte técnico,
-            troubleshooting e diagnóstico de sistemas.
+            Tenho experiência prática com projetos acadêmicos e pessoais,
+            além de suporte técnico, troubleshooting e diagnóstico de problemas
+            em tecnologia. Meu interesse está em desenvolvimento de software,
+            aplicações web, interfaces digitais e resolução de problemas.
           </p>
 
           <p>
-            Atualmente busco ampliar minha experiência prática,
-            fortalecer minha base técnica e evoluir constantemente
-            como desenvolvedor.
+            Busco desenvolver soluções organizadas, úteis e acessíveis,
+            evoluindo continuamente minha base técnica.
           </p>
 
         </motion.div>

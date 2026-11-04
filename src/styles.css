@@ -47,6 +47,21 @@ body {
     overflow-x: hidden;
 }
 
+img,
+svg {
+    max-width: 100%;
+}
+
+.hero-text,
+.hero-terminal,
+.project-card,
+.service-card,
+.technology-group,
+.process-step,
+.contact-card {
+    min-width: 0;
+}
+
 body,
 button,
 input,
@@ -173,6 +188,7 @@ button {
 .hero-text h1 span {
     display: block;
     color: var(--red);
+    overflow-wrap: anywhere;
 }
 
 .hero-text h2 {
@@ -318,6 +334,19 @@ button {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--gray-dark);
+    color: var(--text);
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
 }
 
 
@@ -582,10 +611,273 @@ main {
     color: var(--text-muted);
 }
 
+.technology-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.technology-group {
+    background: var(--gray-dark);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.technology-group h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.technology-item {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background: #111;
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.technology-item:hover {
+    border-color: rgba(229, 9, 20, 0.55);
+    color: var(--text);
+}
+
+.technology-item i {
+    width: 18px;
+    flex-shrink: 0;
+    font-size: 17px;
+    line-height: 1;
+    text-align: center;
+}
+
+.technology-item > span {
+    min-width: 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-card {
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--gray-dark);
+}
+
+.service-card > i {
+    color: var(--red);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.service-card ul {
+    list-style: none;
+    margin-bottom: 22px;
+}
+
+.service-card li {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 7px 0;
+}
+
+.service-card li::before {
+    content: "✓";
+    color: var(--red);
+    margin-right: 8px;
+}
+
+.card-link {
+    margin-top: auto;
+    color: var(--red);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.services-callout {
+    margin-top: 28px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: var(--gray-dark);
+}
+
+.services-callout p {
+    color: var(--text-secondary);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.process-step {
+    border-top: 2px solid var(--red);
+    padding: 20px 16px 16px;
+    background: var(--gray-dark);
+}
+
+.process-step > span {
+    color: var(--red);
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.process-step h3 {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.process-step p {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
 
 /* =========================
    PROJETOS
 ========================= */
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: -25px 0 25px;
+}
+
+.project-filters button {
+    min-height: 38px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--gray-dark);
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.project-filters button:hover,
+.project-filters button.active {
+    border-color: var(--red);
+    color: white;
+    background: rgba(229, 9, 20, 0.12);
+}
+
+.project-card.featured {
+    border-color: rgba(229, 9, 20, 0.38);
+}
+
+.project-status {
+    max-width: 65%;
+    text-align: right;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.project-category {
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+
+.project-description {
+    flex-grow: 0 !important;
+}
+
+.project-purpose {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.project-features {
+    margin: 0 0 18px 18px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.project-features li {
+    margin: 5px 0;
+}
+
+.project-note {
+    border-left: 2px solid var(--red);
+    padding-left: 10px;
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-bottom: 16px;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 18px;
+    margin-top: auto;
+    border-top: 1px solid var(--border);
+}
+
+.project-action {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    flex: 1 1 140px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.project-action.primary {
+    background: var(--red);
+    color: white;
+}
+
+.project-action.secondary {
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+}
 
 .projects-grid {
     display: grid;
@@ -696,6 +988,20 @@ main {
     padding: 5px 9px;
     border-radius: 4px;
     font-family: monospace;
+}
+
+.project-tech-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.project-tech-item i {
+    width: 14px;
+    flex-shrink: 0;
+    font-size: 13px;
+    line-height: 1;
+    text-align: center;
 }
 
 .project-footer {
@@ -810,6 +1116,17 @@ main {
     overflow-wrap: anywhere;
 }
 
+.contact-card-primary {
+    border-color: rgba(229, 9, 20, 0.7);
+    background: rgba(229, 9, 20, 0.08);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid rgba(255, 49, 49, 0.75);
+    outline-offset: 3px;
+}
+
 
 /* =========================
    RODAPÉ
@@ -902,12 +1219,57 @@ footer {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .contact-links {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 900px) {
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links-open {
+        display: flex;
+        position: absolute;
+        top: 80px;
+        left: 4%;
+        right: 4%;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px;
+        background: rgba(13, 13, 13, 0.98);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .nav-links-open a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 10px 14px;
+    }
+
+    .nav-links-open a::after {
+        display: none;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         padding: 130px 0 70px;
@@ -929,7 +1291,11 @@ footer {
     }
 
     .contact-links {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .technology-groups {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -956,10 +1322,46 @@ footer {
         display: none;
     }
 
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .nav-links-open {
+        display: flex;
+        position: absolute;
+        top: 70px;
+        left: 4%;
+        right: 4%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px;
+        background: rgba(13, 13, 13, 0.98);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .nav-links-open a {
+        padding: 12px 14px;
+    }
+
+    .nav-links-open a::after {
+        display: none;
+    }
+
     .hero-content {
         min-height: 100vh;
         padding: 115px 0 55px;
         text-align: center;
+    }
+
+    .hero-text {
+        transform: none !important;
+    }
+
+    .about-card {
+        transform: none !important;
     }
 
     .hero-text h1 {
@@ -1034,6 +1436,25 @@ footer {
     .tech-grid {
         grid-template-columns: 1fr;
         gap: 12px;
+    }
+
+    .technology-groups,
+    .services-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-callout {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .project-filters {
+        margin-top: -15px;
+    }
+
+    .project-status {
+        max-width: 70%;
     }
 
     .tech-card {

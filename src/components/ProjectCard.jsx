@@ -1,93 +1,49 @@
 import { motion } from "framer-motion";
+import { getTechnologyIcon } from "./technologyIcons";
 
 function ProjectCard({ project, index }) {
   return (
-    <motion.article
-      className={`project-card ${project.featured ? "featured" : ""}`}
-      initial={{
-        opacity: 0,
-        y: 50,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.15,
-      }}
-      transition={{
-        duration: 0.6,
-        delay: index * 0.08,
-      }}
-      whileHover={{
-        y: -8,
-        scale: 1.015,
-      }}
-    >
-
+    <motion.article className={`project-card ${project.featured ? "featured" : ""}`} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.55, delay: index * 0.06 }}>
       <div className="project-top">
-
         <i className={`${project.icon} project-icon`}></i>
-
-        <div className="project-links-icons">
-
-          {project.links.map((link) => (
-            <a
-              key={link.url}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={link.title}
-            >
-              <i className={link.icon}></i>
-            </a>
-          ))}
-
-        </div>
-
+        <span className="project-status">{project.status}</span>
       </div>
 
+      <span className="project-category">{project.category}</span>
       <h3>{project.title}</h3>
+      <p className="project-description">{project.description}</p>
+      <p className="project-purpose"><strong>Finalidade:</strong> {project.purpose}</p>
 
-      <p>{project.description}</p>
+      <ul className="project-features">
+        {project.features.map((feature) => <li key={feature}>{feature}</li>)}
+      </ul>
+
+      {project.note && <p className="project-note">{project.note}</p>}
 
       <div className="project-tech">
-
         {project.technologies.map((technology) => (
-          <span key={technology}>
+          <span className="project-tech-item" key={technology}>
+            <i className={getTechnologyIcon(technology)} aria-hidden="true"></i>
             {technology}
           </span>
         ))}
-
       </div>
 
-      <div className="project-footer">
-
-        <span>
-          <i className="fa-regular fa-calendar"></i>
-          {project.year}
-        </span>
-
-        <div className="project-demo-links">
-
-          {project.links.map((link) => (
-            <a
-              key={link.url}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className={link.icon}></i>
-              {link.label}
-              <i className="fa-solid fa-arrow-right"></i>
-            </a>
-          ))}
-
-        </div>
-
+      <div className="project-actions">
+        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="project-action secondary" aria-label={`Ver código-fonte de ${project.title}`}>
+          <i className="fab fa-github"></i> Código-fonte
+        </a>
+        {project.demoUrl && (
+          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="project-action primary" aria-label={`${project.demoLabel} de ${project.title}`}>
+            <i className="fa-solid fa-arrow-up-right-from-square"></i> {project.demoLabel}
+          </a>
+        )}
+        {project.demo2Url && (
+          <a href={project.demo2Url} target="_blank" rel="noopener noreferrer" className="project-action secondary" aria-label={`${project.demo2Label} de ${project.title}`}>
+            <i className="fa-solid fa-play"></i> {project.demo2Label}
+          </a>
+        )}
       </div>
-
     </motion.article>
   );
 }

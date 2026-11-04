@@ -32,6 +32,12 @@ function Footer() {
           <a href="mailto:joaopedrotg23@gmail.com">
             <i className="fa-solid fa-envelope"></i>
           </a>
+          <a href="https://www.linkedin.com/in/joaootg/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de João Pedro">
+            <i className="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://instagram.com/jpedrotg" target="_blank" rel="noopener noreferrer" aria-label="Instagram de João Pedro">
+            <i className="fa-brands fa-instagram"></i>
+          </a>
 
         </div>
 
