@@ -36,13 +36,16 @@ function About() {
           <p>
             Tenho experiência prática com projetos acadêmicos e pessoais,
             além de suporte técnico, troubleshooting e diagnóstico de problemas
-            em tecnologia. Meu interesse está em desenvolvimento de software,
-            aplicações web, interfaces digitais e resolução de problemas.
+            em tecnologia. Tenho interesse em atuar em diferentes áreas da
+            tecnologia, incluindo desenvolvimento, suporte, infraestrutura,
+            sistemas e soluções digitais, sempre com foco em compreender
+            necessidades e resolver problemas.
           </p>
 
           <p>
-            Busco desenvolver soluções organizadas, úteis e acessíveis,
-            evoluindo continuamente minha base técnica.
+            Busco oportunidades de aprendizado e crescimento em que possa
+            contribuir com organização, responsabilidade e evolução técnica,
+            enquanto amplio minha experiência em ambientes profissionais.
           </p>
 
         </motion.div>
@@ -81,7 +84,7 @@ function About() {
             <span className="number">04</span>
             <span className="property">foco:</span>
             <span className="string">
-              "Desenvolvimento"
+              "Tecnologia & soluções"
             </span>,
           </div>
 
