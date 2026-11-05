@@ -23,7 +23,7 @@ O portfólio tem identidade visual escura, detalhes em vermelho, elementos inspi
 
 | Projeto | Descrição | Situação |
 |---|---|---|
-| [Catálogo Digital — Sophia Barbosa Makeup](https://github.com/jpedrotg23/catalogo-sophia) | Site profissional com galeria, serviços e informações para agendamento. [Acessar site](https://jpedrotg23.github.io/catalogo-sophia/) | Publicado |
+| [Catálogo Digital — Sophia Barbosa Makeup](https://github.com/jpedrotg23/catalogo-sophia) | Catálogo React responsivo com galeria de nove fotos, lightbox, animações suaves, serviços e preços atualizados, otimização de imagens e contato pelo WhatsApp. [Acessar catálogo](https://sophiabarbosa.pages.dev/) | Publicado no Cloudflare Pages |
 | [PAP Online](https://github.com/jpedrotg23/PAP-Online) | Protótipo de frontend para uma plataforma de apoio psicopedagógico. [Ver demonstração](https://jpedrotg23.github.io/PAP-Online/) | Frontend publicado; backend planejado |
 | [Acessibilidade Urbana](https://github.com/jpedrotg23/AcessibilidadeUrbana) | Aplicativo mobile acadêmico para mapeamento e avaliação colaborativa de acessibilidade. | Projeto acadêmico |
 | [Mundo do Saber](https://github.com/jpedrotg23/MundoDoSaber) | Jogo educacional 2D desenvolvido na Godot Engine. [Vídeo — Controle físico](https://www.youtube.com/shorts/SOx6c0GzZwI) · [Vídeo — Gameplay na tela](https://drive.google.com/file/d/1MTcuTmTjVfcyvKwzG-T3EtF9dRZkNQge/view?usp=sharing) | Projeto de game development |
