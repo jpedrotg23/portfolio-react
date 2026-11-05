@@ -28,6 +28,8 @@ const technologyIcons = {
   OpenStreetMap: "fa-solid fa-map",
   Nominatim: "fa-solid fa-magnifying-glass-location",
   "Framer Motion": "fa-solid fa-wand-magic-sparkles",
+  "Cloudflare Pages": "fa-solid fa-cloud-arrow-up",
+  Sharp: "fa-solid fa-images",
   Konva: "fa-solid fa-shapes",
   "React Konva": "fa-solid fa-shapes",
 };
